@@ -1,6 +1,5 @@
-/* -------------------------------------------------- */
-/* GLOBAL RESET                                         */
-/* -------------------------------------------------- */
+/* Homepage Border Box */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +9,11 @@
 
 body {
     background: #f2f2f2;
-    display: block;        /* FIX: prevents horizontal layout */
+    display: block;
     width: 100%;
 }
 
-/* Centered content wrapper (Option B layout) */
+/* Homepage Inner Wrapper */
 .section-inner {
     width: 100%;
     max-width: 1100px;
@@ -22,9 +21,8 @@ body {
     padding: 40px 30px;
 }
 
-/* -------------------------------------------------- */
-/* HEADER                                               */
-/* -------------------------------------------------- */
+/* Nav Settings for Homepage AND Projects*/
+
 header {
     background: #D8F9FA;
     width: 100%;
@@ -42,41 +40,30 @@ header {
     margin-left: 20px;
 }
 
-/* -------------------------------------------------- */
-/* HOMEPAGE HERO                                        */
-/* -------------------------------------------------- */
+/* Homepage Hero */
+
 .hero {
     width: 100%;
     height: 600px;
     background: url('/images/Hero Ocean.png') center/cover no-repeat;
-
     display: flex;
-    justify-content: center;   /* center horizontally */
-    align-items: center;       /* center vertically */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 0 20px;
 }
 
 .hero h1 {
-    font-family: "Afacad", sans-serif;
-    font-weight: 400;          /* regular */
+    font-weight: 400;
     font-size: 96px;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
     color: #FFFFFF;
-
-    /* Soft shadow for readability */
-    text-shadow: 
-        0px 4px 10px rgba(0,0,0,0.5),
-        0px 2px 8px rgba(0,0,0,0.3);
+    text-shadow:
+        0px 4px 10px rgba(0, 0, 0, 0.5),
+        0px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* -------------------------------------------------- */
-/* PROJECTS SECTION (HOMEPAGE)                          */
-/* -------------------------------------------------- */
-
-/* ============================== */
-/* "You May Know Me From These Videos" */
-/* ============================== */
+/* Homepage Projects Section */
 
 .projects {
     background: #84D3FA;
@@ -89,10 +76,9 @@ header {
     padding: 60px 30px;
 }
 
-/* Section title */
+/* Section Title */
 .projects h2 {
-    font-family: "Afacad", sans-serif;
-    font-weight: 600;        /* semibold */
+    font-weight: 600;      
     font-size: 48px;
     letter-spacing: 0;
     color: #4B302F;
@@ -100,7 +86,7 @@ header {
     margin-bottom: 40px;
 }
 
-/* 3 equal columns */
+/* 3-column layout for homepage videos */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -109,7 +95,7 @@ header {
     align-items: stretch;
 }
 
-/* Card wrapper: column layout so button can sit at bottom */
+/* Card Wrapper */
 .video-card {
     display: flex;
     flex-direction: column;
@@ -118,51 +104,46 @@ header {
     text-align: left;
 }
 
-/* Image paragraph (first <p>) */
+/* First <p>: Image Wrapper */
 .video-card p:first-of-type {
     margin-bottom: 16px;
 }
 
-/* The <img> itself */
+/* Image (Video Icon) */
 .video-card img {
     width: 100%;
     display: block;
     border-radius: 0;
 }
 
-/* Description paragraph (second <p>) */
+/* Second <p>: Description */
 .video-card p:nth-of-type(2) {
-    font-family: "Afacad", sans-serif;
     font-weight: 400;
     font-size: 32px;
-    letter-spacing: -0.02em;     /* -2% */
+    letter-spacing: -0.02em;
     color: #4B302F;
     text-align: left;
     line-height: 1.3;
     margin-bottom: 16px;
-
-    flex-grow: 1;                /* 🔑 THIS one stretches so buttons align */
+    flex-grow: 1; 
 }
 
-/* Button paragraph (third <p>) */
+/* Third <p>: Button Wrapper */
 .video-card p:last-of-type {
     margin-top: 8px;
     margin-bottom: 0;
 }
 
-/* Button itself */
+/* Button in Cards */
 .video-card .btn {
     background: #4B302F;
     color: #FFFFFF;
     border: none;
     border-radius: 0;
     padding: 10px 18px;
-
-    font-family: "Afacad", sans-serif;
     font-weight: 400;
     font-size: 32px;
     letter-spacing: -0.02em;
-
     display: inline-block;
 }
 
@@ -170,12 +151,10 @@ header {
     opacity: 0.85;
 }
 
-/* ============================== */
-/* ABOUT ME SECTION               */
-/* ============================== */
+/* Homepage-About Me*/
 
 .about-me {
-    background: #84D3FA;          /* section background */
+    background: #84AEFA;
     width: 100%;
 }
 
@@ -183,10 +162,8 @@ header {
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 30px;
-
-    /* two-column layout with heading on top */
     display: grid;
-    grid-template-columns: 1fr 1.2fr;  /* image | text */
+    grid-template-columns: 1fr 1.2fr; 
     column-gap: 40px;
     row-gap: 24px;
     align-items: flex-start;
@@ -194,49 +171,47 @@ header {
 
 /* "About Me" heading */
 .about-me h2 {
-    grid-column: 1 / -1;          /* span both columns */
-    font-family: "Afacad", sans-serif;
+    grid-column: 1 / -1;
     font-weight: 700;             /* bold */
     font-size: 64px;
-    letter-spacing: -0.02em;      /* -2% */
+    letter-spacing: -0.02em;
     color: #2F1E1D;
     margin-bottom: 16px;
 }
 
-/* First <p> (the image wrapper) */
+/* First <p>: Image Wrapper */
 .about-me p:nth-of-type(1) {
     grid-column: 1;
     margin: 0;
 }
 
-/* The image itself */
+/* Headshot */
 .about-me p:nth-of-type(1) img {
     width: 100%;
-    max-width: 506px;             /* matches Figma width */
+    max-width: 506px;
     height: auto;
     border-radius: 0;
     display: block;
 }
 
-/* Second <p> (the main text) */
+/* Second <p>: main text */
 .about-me p:nth-of-type(2) {
     grid-column: 2;
-    font-family: "Afacad", sans-serif;
-    font-weight: 400;             /* regular */
+    font-weight: 400;
     font-size: 32px;
-    letter-spacing: -0.02em;      /* -2% */
+    letter-spacing: -0.02em;
     color: #2F1E1D;
     text-align: left;
     line-height: 1.4;
     margin: 0 0 16px;
 }
 
-/* Bold just your name inside that text */
+/* My Name (bolded) */
 .about-me .about-name {
-    font-weight: 700;             /* bold */
+    font-weight: 700;
 }
 
-/* Third <p> (the button wrapper) */
+/* Third <p>: Button Wrapper */
 .about-me p:nth-of-type(3) {
     grid-column: 2;
     margin: 0;
@@ -247,109 +222,211 @@ header {
     background: #2F1E1D;
     color: #FFFFFF;
     border: none;
-    border-radius: 0;             /* square corners */
+    border-radius: 0;
     padding: 10px 24px;
-
-    font-family: "Afacad", sans-serif;
-    font-weight: 400;             /* regular */
+    font-weight: 400;
     font-size: 32px;
     letter-spacing: -0.02em;
-
     display: inline-block;
 }
 
-/* -------------------------------------------------- */
-/* FOOTER                                               */
-/* -------------------------------------------------- */
+/* Hompage and Projects Page Footer Style */
+
 footer {
-    background: #84AEFA;
+    background: #84D3FA;  /* homepage */
     width: 100%;
-    color: #2F1E1D;
 }
 
+footer .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px 40px;
+}
+
+/* "Contact Email" heading */
 footer h2 {
-    font-size: 48px;
-    font-weight: 700;
+    font-weight: 700;     /* homepage */
+    font-size: 64px;
+    letter-spacing: -0.02em;
+    color: #4B302F;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
+/* Footer text & "Follow my work..." */
 footer p {
-    font-size: 20px;
+    font-weight: 400;   /* homepage */
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: #4B302F;
+    text-align: center;
     margin-bottom: 14px;
 }
 
-footer img {
-    width: 70px;
-    margin-bottom: 10px;
-}
-
+/* "View More" button in footer (base) */
 footer .btn {
-    background: #2F1E1D;
-    color: white;
+    background: #4B302F;   /* homepage */
+    color: #FFFFFF;
     border: none;
-    border-radius: 10px;
-    padding: 16px 26px;
-    font-size: 20px;
-    margin: 20px 0;
-}
-
-/* Social Icons */
-footer svg {
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-    color: #2F1E1D;
-}
-
-/* -------------------------------------------------- */
-/* PROJECT LISTINGS PAGE                               */
-/* -------------------------------------------------- */
-.projects-page .hero {
-    background: url('/images/Hero Ocean.png') center/cover no-repeat;
-    height: 600px;
-}
-
-.projects-page .hero-text {
-    color: white;
-    font-size: 96px;
+    border-radius: 0;
+    padding: 10px 26px;
     font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    display: inline-block;
+    margin: 20px 0 26px;
 }
 
-.projects-page .hero-description-box {
-    background: rgba(97, 62, 61, 0.9);
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-.projects-page .hero-description-box p {
-    font-size: 48px;
-    color: white;
-    line-height: 1.1;
-}
-
-/* Category titles on listings page */
-.category-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #4B302F;
-    margin: 40px 0 20px;
-}
-
-/* Grid for project images */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.project-grid img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.video-title {
+/* Logo + My Name & Title text */
+.contact-footer-text {
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    color: #613E3D;
     text-align: center;
-    font-size: 20px;
+    line-height: 1.2;
     margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.contact-footer-text img {
+    width: 132px;
+    height: 140px;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+/* Social icons row */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    margin-top: 10px;
+}
+
+/* Icon size */
+.socials svg {
+    width: 86px;
+    height: 86px;
+}
+
+/* Projects Page */
+
+/* HERO on projects page */
+.projects-page .hero {
+    background: url("/images/IMG_4093 1.png") center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.projects-page .hero .container {
+    text-align: left;
+}
+
+/* Projects Page Hero Title */
+.projects-page .hero-title {
+    font-weight: 400;
+    font-size: 96px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Brown description box */
+.projects-page .hero-box {
+    width: 480px;
+    min-height: 240px;
+    background: rgba(97, 62, 61, 0.90);
+    padding: 25px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text inside brown box */
+.projects-page .hero-box p {
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* "All Projects" blue block */
+.projects-page .projects-section {
+    background: #84D3FA;
+    padding: 60px 0;
+}
+
+/* "All Projects" heading */
+.projects-page .projects-title {
+    font-weight: 700;        /* bold */
+    font-size: 64px;
+    letter-spacing: 0.03em;  /* 3% */
     color: #4B302F;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Subheadings (Property Promotion, etc.) */
+.projects-page .subcategory-title {
+    font-weight: 600;        /* semibold */
+    font-size: 48px;
+    letter-spacing: 0.03em;  /* 3% */
+    color: #4B302F;
+    text-align: left;
+    margin: 50px 0 20px 0;
+}
+
+/* Titles under thumbnails on projects page */
+.projects-page .video-title {
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: #4B302F;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* Projects Page Footer (difference) */
+
+/* Purple footer background on projects page only */
+.projects-page footer {
+    background: #84AEFA;
+}
+
+/* Footer text color on projects page */
+.projects-page footer h2,
+.projects-page footer p,
+.projects-page footer .contact-footer-text {
+    color: #2F1E1D !important;
+}
+
+/* Footer button on projects page */
+.projects-page footer .btn {
+    background: #2F1E1D !important;
+    color: #FFFFFF !important;
+    border-radius: 0 !important;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    padding: 10px 26px;
+}
+/* Social icons on projects page footer */
+.projects-page .socials {
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    margin-top: 10px;
+}
+
+.projects-page .socials svg {
+    width: 86px;
+    height: 86px;
+    fill: #FFFFFF;          /* keep icons white, not brown */
 }

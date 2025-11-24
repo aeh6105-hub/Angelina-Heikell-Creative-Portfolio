@@ -1,0 +1,355 @@
+/* -------------------------------------------------- */
+/* GLOBAL RESET                                         */
+/* -------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad", sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    display: block;        /* FIX: prevents horizontal layout */
+    width: 100%;
+}
+
+/* Centered content wrapper (Option B layout) */
+.section-inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+/* -------------------------------------------------- */
+/* HEADER                                               */
+/* -------------------------------------------------- */
+header {
+    background: #D8F9FA;
+    width: 100%;
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #613E3D;
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+/* -------------------------------------------------- */
+/* HOMEPAGE HERO                                        */
+/* -------------------------------------------------- */
+.hero {
+    width: 100%;
+    height: 600px;
+    background: url('/images/Hero Ocean.png') center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: "Afacad", sans-serif;
+    font-weight: 400;          /* regular */
+    font-size: 96px;
+    letter-spacing: -2%;
+    color: #FFFFFF;
+
+    /* Soft shadow for readability */
+    text-shadow: 
+        0px 4px 10px rgba(0,0,0,0.5),
+        0px 2px 8px rgba(0,0,0,0.3);
+}
+
+/* -------------------------------------------------- */
+/* PROJECTS SECTION (HOMEPAGE)                          */
+/* -------------------------------------------------- */
+
+/* ============================== */
+/* "You May Know Me From These Videos" */
+/* ============================== */
+
+.projects {
+    background: #84D3FA;
+    width: 100%;
+}
+
+.projects .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+/* Section title */
+.projects h2 {
+    font-family: "Afacad", sans-serif;
+    font-weight: 600;        /* semibold */
+    font-size: 48px;
+    letter-spacing: 0;
+    color: #4B302F;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* 3 equal columns */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 40px;
+    align-items: stretch;
+}
+
+/* Card wrapper: column layout so button can sit at bottom */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+/* Image paragraph (first <p>) */
+.video-card p:first-of-type {
+    margin-bottom: 16px;
+}
+
+/* The <img> itself */
+.video-card img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+
+/* Description paragraph (second <p>) */
+.video-card p:nth-of-type(2) {
+    font-family: "Afacad", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;     /* -2% */
+    color: #4B302F;
+    text-align: left;
+    line-height: 1.3;
+    margin-bottom: 16px;
+
+    flex-grow: 1;                /* 🔑 THIS one stretches so buttons align */
+}
+
+/* Button paragraph (third <p>) */
+.video-card p:last-of-type {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Button itself */
+.video-card .btn {
+    background: #4B302F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    padding: 10px 18px;
+
+    font-family: "Afacad", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+
+    display: inline-block;
+}
+
+.video-card .btn:hover {
+    opacity: 0.85;
+}
+
+/* ============================== */
+/* ABOUT ME SECTION               */
+/* ============================== */
+
+.about-me {
+    background: #84D3FA;          /* section background */
+    width: 100%;
+}
+
+.about-me .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+
+    /* two-column layout with heading on top */
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;  /* image | text */
+    column-gap: 40px;
+    row-gap: 24px;
+    align-items: flex-start;
+}
+
+/* "About Me" heading */
+.about-me h2 {
+    grid-column: 1 / -1;          /* span both columns */
+    font-family: "Afacad", sans-serif;
+    font-weight: 700;             /* bold */
+    font-size: 64px;
+    letter-spacing: -0.02em;      /* -2% */
+    color: #2F1E1D;
+    margin-bottom: 16px;
+}
+
+/* First <p> (the image wrapper) */
+.about-me p:nth-of-type(1) {
+    grid-column: 1;
+    margin: 0;
+}
+
+/* The image itself */
+.about-me p:nth-of-type(1) img {
+    width: 100%;
+    max-width: 506px;             /* matches Figma width */
+    height: auto;
+    border-radius: 0;
+    display: block;
+}
+
+/* Second <p> (the main text) */
+.about-me p:nth-of-type(2) {
+    grid-column: 2;
+    font-family: "Afacad", sans-serif;
+    font-weight: 400;             /* regular */
+    font-size: 32px;
+    letter-spacing: -0.02em;      /* -2% */
+    color: #2F1E1D;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0 0 16px;
+}
+
+/* Bold just your name inside that text */
+.about-me .about-name {
+    font-weight: 700;             /* bold */
+}
+
+/* Third <p> (the button wrapper) */
+.about-me p:nth-of-type(3) {
+    grid-column: 2;
+    margin: 0;
+}
+
+/* "Learn More" button */
+.about-me .btn {
+    background: #2F1E1D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;             /* square corners */
+    padding: 10px 24px;
+
+    font-family: "Afacad", sans-serif;
+    font-weight: 400;             /* regular */
+    font-size: 32px;
+    letter-spacing: -0.02em;
+
+    display: inline-block;
+}
+
+/* -------------------------------------------------- */
+/* FOOTER                                               */
+/* -------------------------------------------------- */
+footer {
+    background: #84AEFA;
+    width: 100%;
+    color: #2F1E1D;
+}
+
+footer h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+footer p {
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+footer img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+footer .btn {
+    background: #2F1E1D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 26px;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* Social Icons */
+footer svg {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    color: #2F1E1D;
+}
+
+/* -------------------------------------------------- */
+/* PROJECT LISTINGS PAGE                               */
+/* -------------------------------------------------- */
+.projects-page .hero {
+    background: url('/images/Hero Ocean.png') center/cover no-repeat;
+    height: 600px;
+}
+
+.projects-page .hero-text {
+    color: white;
+    font-size: 96px;
+    font-weight: 400;
+}
+
+.projects-page .hero-description-box {
+    background: rgba(97, 62, 61, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.projects-page .hero-description-box p {
+    font-size: 48px;
+    color: white;
+    line-height: 1.1;
+}
+
+/* Category titles on listings page */
+.category-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #4B302F;
+    margin: 40px 0 20px;
+}
+
+/* Grid for project images */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-grid img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.video-title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #4B302F;
+}
